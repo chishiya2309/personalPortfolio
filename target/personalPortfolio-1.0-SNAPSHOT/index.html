@@ -9,16 +9,16 @@
         <script src="https://kit.fontawesome.com/d0d1437224.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div id="header">
+        <header id="header">
             <div class="container">
                 <nav>
                     <img src="images/logo.svg" alt="" class="logo">
                     <ul id="sidemenu">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Exercises</a></li>
-                        <li><a href="#">Portfolio</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#exercises">Exercises</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
                         <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -28,9 +28,10 @@
                     <h1>Hi, I'm <span>Hung</span><br>Le FROM HCMUTE</h1>
                 </div>
             </div>
-        </div>
+        </header>
+        <main>
         <!--About-->
-        <div id="about">
+        <section id="about">
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
@@ -59,65 +60,167 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="services">
+        </section>
+        <!-----------------Exercises------------>
+        <section id="exercises">
+            <div class="container">
+                <h2 class="sub-title">My Exercises</h2>
+                <p class="section-desc">Collection of my web development practice exercises and projects</p>
+                <div class="exercises-list">
+                    <article class="exercise-card" data-category="html-css">
+                        <div class="exercise-icon">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <h3>Exercise 1: HTML Basics</h3>
+                        <p class="exercise-desc">Introduction to HTML structure, semantic tags, and forms</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">HTML</span>
+                            <span class="exercise-tag">CSS</span>
+                        </div>
+                        <a href="exercises/exercise1/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                    <article class="exercise-card" data-category="css">
+                        <div class="exercise-icon">
+                            <i class="fa-brands fa-css3-alt"></i>
+                        </div>
+                        <h3>Exercise 2: CSS Styling</h3>
+                        <p class="exercise-desc">Advanced CSS techniques, flexbox, and grid layouts</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">CSS</span>
+                            <span class="exercise-tag">Flexbox</span>
+                        </div>
+                        <a href="exercises/exercise2/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                    <article class="exercise-card" data-category="javascript">
+                        <div class="exercise-icon">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h3>Exercise 3: JavaScript DOM</h3>
+                        <p class="exercise-desc">DOM manipulation, events, and interactive features</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">JavaScript</span>
+                            <span class="exercise-tag">DOM</span>
+                        </div>
+                        <a href="exercises/exercise3/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                    <article class="exercise-card" data-category="javascript">
+                        <div class="exercise-icon">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h3>Exercise 4: Web Forms</h3>
+                        <p class="exercise-desc">Form validation, user input handling, and data processing</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">Forms</span>
+                            <span class="exercise-tag">Validation</span>
+                        </div>
+                        <a href="exercises/exercise4/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                    <article class="exercise-card" data-category="responsive">
+                        <div class="exercise-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <h3>Exercise 5: Responsive Design</h3>
+                        <p class="exercise-desc">Mobile-first design, media queries, and adaptive layouts</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">Responsive</span>
+                            <span class="exercise-tag">Mobile</span>
+                        </div>
+                        <a href="exercises/exercise5/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                    <article class="exercise-card" data-category="api">
+                        <div class="exercise-icon">
+                            <i class="fa-solid fa-cloud"></i>
+                        </div>
+                        <h3>Exercise 6: API Integration</h3>
+                        <p class="exercise-desc">Fetch API, REST APIs, and asynchronous JavaScript</p>
+                        <div class="exercise-meta">
+                            <span class="exercise-tag">API</span>
+                            <span class="exercise-tag">Async</span>
+                        </div>
+                        <a href="exercises/exercise6/index.html" class="exercise-link" target="_blank">
+                            <i class="fa-solid fa-arrow-right"></i> View Exercise
+                        </a>
+                    </article>
+                </div>
+                <!-- Filter Buttons -->
+                <div class="exercise-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="html-css">HTML/CSS</button>
+                    <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                    <button class="filter-btn" data-filter="responsive">Responsive</button>
+                    <button class="filter-btn" data-filter="api">API</button>
+                </div>
+            </div>
+        </section>
+        <section id="services">
             <div class="container">
                 <h2 class="sub-title">My Services</h2>
                 <div class="services-list">
-                    <div>
+                    <article>
                         <i class="fa-solid fa-code"></i>
                         <h3>Web Design</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati est soluta magni modi provident minus eius ducimus nesciunt sed numquam ipsam, tempore optio error perspiciatis aspernatur facilis! Odio, atque quaerat!</p>
                         <a href="#">Learn more</a>
-                    </div>
-                    <div>
+                    </article>
+                    <article>
                         <i class="fa-solid fa-crop"></i>
                         <h3>UI/UX Design</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati est soluta magni modi provident minus eius ducimus nesciunt sed numquam ipsam, tempore optio error perspiciatis aspernatur facilis! Odio, atque quaerat!</p>
                         <a href="#">Learn more</a>
-                    </div>
-                    <div>
+                    </article>
+                    <article>
                         <i class="fa-brands fa-app-store"></i>
                         <h3>App Design</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati est soluta magni modi provident minus eius ducimus nesciunt sed numquam ipsam, tempore optio error perspiciatis aspernatur facilis! Odio, atque quaerat!</p>
                         <a href="#">Learn more</a>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
         <!-----------------portfolio------------>
-        <div id="portfolio">
+        <section id="portfolio">
             <div class="container">
                 <h2 class="sub-title">My Work</h2>
             </div>
             <div class="work-list">
-                <div class="work">
+                <article class="work">
                     <img src="images/work-1.png" alt="">
                     <div class="layer">
                         <h3>Social Media App</h3>
                         <p>The app connects you to the talented people around the world. Download it from play store.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/work-2.png" alt="">
                     <div class="layer">
                         <h3>Music App</h3>
                         <p>The app connects you to the talented people around the world. Download it from play store.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
-                <div class="work">
+                </article>
+                <article class="work">
                     <img src="images/work-3.png" alt="">
                     <div class="layer">
                         <h3>Online Shopping App</h3>
                         <p>The app connects you to the talented people around the world. Download it from play store.</p>
                         <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
             <a href="#" class="btn">See more</a>
-        </div>
+        </section>
+        </main>
         <!-- ------------contact--------- -->
         <footer class="contact">
             <section class="container">
@@ -134,9 +237,9 @@
                         <a href="images/23110110_CV.pdf" download class="btn btn2">Download CV</a>
                     </section>
                     <section class="contact-right">
-                        <form action="">
+                        <form name="submit-to-google-sheet">
                             <input type="text" name="Name" placeholder="Your Name" required>
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="Email" placeholder="Your Email" required>
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
@@ -173,6 +276,81 @@
             function closemenu() {
                 sidemenu.style.right = "-200px";
             }
+        </script>
+
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwUCFe3o-Xq_IDinVHe5ADiFv_jaUd4rg4ulpv5-ooCmQYbkTld4pZWm2xy990e43r_/exec'
+            const form = document.forms['submit-to-google-sheet']
+
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+
+        <!-- Exercise Filter Script -->
+        <script>
+            // Filter exercises by category
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const exerciseCards = document.querySelectorAll('.exercise-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Add active class to clicked button
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    exerciseCards.forEach(card => {
+                        if (filterValue === 'all') {
+                            card.style.display = 'block';
+                            card.classList.add('fade-in');
+                        } else {
+                            if (card.getAttribute('data-category') === filterValue) {
+                                card.style.display = 'block';
+                                card.classList.add('fade-in');
+                            } else {
+                                card.style.display = 'none';
+                                card.classList.remove('fade-in');
+                            }
+                        }
+                    });
+                });
+            });
+
+            // Add animation on scroll
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all exercise cards
+            exerciseCards.forEach(card => {
+                observer.observe(card);
+            });
+
+            // Add hover effect counter
+            exerciseCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px) scale(1.02)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
         </script>
     </body>
 </html>
