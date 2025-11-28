@@ -12,7 +12,7 @@
         <header id="header">
             <div class="container">
                 <nav>
-                    <img src="images/logo.svg" alt="" class="logo">
+                    <img src="images/logo.png" alt="" class="logo">
                     <ul id="sidemenu">
                         <li><a href="#header">Home</a></li>
                         <li><a href="#about">About</a></li>
@@ -194,11 +194,11 @@
             </div>
             <div class="work-list">
                 <article class="work">
-                    <img src="images/work-1.png" alt="">
+                    <img src="images/Maze_explorer.png" alt="">
                     <div class="layer">
-                        <h3>Social Media App</h3>
+                        <h3>AI Project Maze Explorer</h3>
                         <p>The app connects you to the talented people around the world. Download it from play store.</p>
-                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://github.com/chishiya2309/AI_Project_Maze_Explorer" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                 </article>
                 <article class="work">
@@ -230,9 +230,9 @@
                         <p><i class="fa-solid fa-paper-plane"></i> lequanghung.work@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i> 0347983243</p>
                         <section class="social-icons">
-                            <a href="https://www.facebook.com/le.q.hung.2309"><i class="fa-brands fa-facebook"></i> Lê Quang Hưng</a><br>
-                            <a href="https://www.linkedin.com/in/hung-le-quang-154210239/"><i class="fa-brands fa-linkedin"></i> Hung Le Quang</a><br>
-                            <a href="https://github.com/chishiya2309"><i class="fa-brands fa-github"></i> chishiya2309</a><br>
+                            <a href="https://www.facebook.com/le.q.hung.2309" target="_blank"><i class="fa-brands fa-facebook"></i> Lê Quang Hưng</a><br>
+                            <a href="https://www.linkedin.com/in/hung-le-quang-154210239/" target="_blank"><i class="fa-brands fa-linkedin"></i> Hung Le Quang</a><br>
+                            <a href="https://github.com/chishiya2309" target="_blank"><i class="fa-brands fa-github"></i> chishiya2309</a><br>
                         </section>
                         <a href="images/23110110_CV.pdf" download class="btn btn2">Download CV</a>
                     </section>
@@ -243,6 +243,7 @@
                             <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                             <button type="submit" class="btn btn2">Submit</button>
                         </form>
+                        <span id="msg"></span>
                     </section>
                 </section>
             </section>
@@ -281,11 +282,18 @@
         <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwUCFe3o-Xq_IDinVHe5ADiFv_jaUd4rg4ulpv5-ooCmQYbkTld4pZWm2xy990e43r_/exec'
             const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
 
             form.addEventListener('submit', e => {
                 e.preventDefault()
                 fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => console.log('Success!', response))
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function() {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                })
                 .catch(error => console.error('Error!', error.message))
             })
         </script>
